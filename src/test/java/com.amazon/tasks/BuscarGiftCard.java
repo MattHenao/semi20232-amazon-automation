@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static com.amazon.page.CabeceraPage.BUT_GIFT_CARDS;
+import static com.amazon.page.CabeceraPage.BUT_NO_CHANGE;
 import static com.amazon.page.GiftCardPage.AMAZON_GIFT_CARD;
 import static com.amazon.page.GiftCardPage.BUT_AMAZON;
 
@@ -23,6 +24,12 @@ public class BuscarGiftCard {
     public static Performable buscaGiftCardAmazon() {
         return Task.where("Busca el primer gift card de Amazon",
                 Click.on(AMAZON_GIFT_CARD)
+        );
+    }
+
+    public static Performable buscarBotonDontChange() {
+        return Task.where("Busca boton 'Don't Change'",
+                Click.on(BUT_NO_CHANGE)
         );
     }
 }

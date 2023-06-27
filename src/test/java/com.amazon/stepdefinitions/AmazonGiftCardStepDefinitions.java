@@ -7,13 +7,14 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
-import static com.amazon.page.CabeceraPage.BUT_GIFT_CARDS;
+import static com.amazon.page.GiftCardPage.AMAZON_E_CARD;
 
 public class AmazonGiftCardStepDefinitions {
     @Cuando("busco una amazon gift card")
     public void buscarGC() {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com/"),
+                BuscarGiftCard.buscarBotonDontChange(),
                 BuscarGiftCard.buscarBotonGiftCard(),
                 BuscarGiftCard.buscarBotonAmazonGF(),
                 BuscarGiftCard.buscaGiftCardAmazon()
@@ -23,7 +24,7 @@ public class AmazonGiftCardStepDefinitions {
     @Entonces("debe verse eGift Card")
     public void paginaGC() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Ensure.that(BUT_GIFT_CARDS).isEnabled()
+                Ensure.that(AMAZON_E_CARD).isEnabled()
         );
     }
 }
