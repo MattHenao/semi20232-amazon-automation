@@ -11,7 +11,7 @@ import static com.amazon.page.CabeceraPage.VERIFICAR_IDIOMA;
 
 public class CambiarIdiomaStepDefinitions {
     @Cuando("cambio idioma de amazon")
-    public void CambiarIdioma() {
+    public void cambiarIdioma() {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com/"),
                 CambiarIdioma.buscarBotonCambiarIdioma(),
