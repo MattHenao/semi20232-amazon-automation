@@ -10,8 +10,8 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 import static com.amazon.page.MusicPage.VERIFY_MUSIC_PAGE;
 
 public class AmazonMusicStepDefinitions {
-    @Cuando("cambio de pagina")
-    public void cambiarPagina() {
+    @Cuando("cambio de pagina a amazon music")
+    public void cambiarPaginaMusic() {
         OnStage.theActorCalled("usuario").attemptsTo(
                 Open.url("https://www.amazon.com/"),
                 PaginaMusic.buscarBotonAll(),
